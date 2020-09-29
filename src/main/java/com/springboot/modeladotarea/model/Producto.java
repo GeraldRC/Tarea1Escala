@@ -15,22 +15,20 @@ public class Producto {
     @Id
     private Integer idproducto;
 
-    @Column(name = "nombre", nullable = false)
+    @Column(name = "nombre_producto", nullable = false)
     private String nombre;
 
-    @Column(name = "descripcion", nullable = false)
+    @Column(name = "descripcion_producto", nullable = false)
     private String descripcion;
 
     @ManyToOne
     @JoinColumn(name = "id_marca", foreignKey = @ForeignKey(name = "FK_prooducto_marca"))
     private Marca marca;
 
-    @Column(name = "valor", nullable = false)
+    @Column(name = "valor_producto", nullable = false)
     private Float valor;
 
-    @Column(name = "producto", nullable = false)
-    private String producto;
-
+ 
     public Integer getIdproducto() {
         return idproducto;
     }
@@ -71,13 +69,6 @@ public class Producto {
         this.valor = valor;
     }
 
-    public String getProducto() {
-        return producto;
-    }
-
-    public void setProducto(String producto) {
-        this.producto = producto;
-    }
 
     @Override
     public int hashCode() {

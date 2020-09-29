@@ -15,18 +15,15 @@ import javax.persistence.Table;
 public class Vendedor {
 
     @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idvendedor;
 
     @ManyToOne
-    @JoinColumn(name = "id_supervisor",foreignKey = @ForeignKey(name="FK_vendedor_supervisor"))
+    @JoinColumn(name = "id_supervisor", foreignKey = @ForeignKey(name = "FK_vendedor_supervisor"))
     private Supervisor supervisor;
 
-    @Column(name = "nombre",nullable = false)
+    @Column(name = "nombre_vendedor", nullable = false)
     private String nombre;
-
-    @Column(name = "vendedor",nullable = false)
-    private String vendedor;
 
     @Column(name = "direccion_vendedor")
     private String direccion;
@@ -55,14 +52,6 @@ public class Vendedor {
         this.nombre = nombre;
     }
 
-    public String getVendedor() {
-        return vendedor;
-    }
-
-    public void setVendedor(String vendedor) {
-        this.vendedor = vendedor;
-    }
-
     public String getDireccion() {
         return direccion;
     }
@@ -70,7 +59,5 @@ public class Vendedor {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-
-    
 
 }

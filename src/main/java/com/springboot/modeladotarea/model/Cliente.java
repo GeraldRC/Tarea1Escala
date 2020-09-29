@@ -15,11 +15,8 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idcliente;
 
-    @Column(name = "nombre",nullable = false)
+    @Column(name = "nombre_cliente",nullable = false)
     private String nombre;
-
-    @Column(name = "cliente",nullable = false)
-    private String cliente;
 
     @Column(name = "direccion_cliente")
     private String direccion;
@@ -41,14 +38,6 @@ public class Cliente {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(String cliente) {
-        this.cliente = cliente;
     }
 
     public String getDireccion() {

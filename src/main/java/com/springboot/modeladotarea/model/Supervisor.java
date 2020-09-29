@@ -15,13 +15,10 @@ public class Supervisor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idsupervisor;
 
-    @Column(name = "nombre",nullable = false)
+    @Column(name = "nombre_supervisor", nullable = false)
     private String nombre;
 
-    @Column(name = "supervisor",nullable = false)
-    private String supervisor;
-
-    @Column(name = "direccion_supervisor",nullable = false)
+    @Column(name = "direccion_supervisor", nullable = false)
     private String direccion;
 
     @Column(name = "telefono_supervisor")
@@ -43,14 +40,6 @@ public class Supervisor {
         this.nombre = nombre;
     }
 
-    public String getSupervisor() {
-        return supervisor;
-    }
-
-    public void setSupervisor(String supervisor) {
-        this.supervisor = supervisor;
-    }
-
     public String getDireccion() {
         return direccion;
     }
@@ -66,7 +55,5 @@ public class Supervisor {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-
-    
 
 }

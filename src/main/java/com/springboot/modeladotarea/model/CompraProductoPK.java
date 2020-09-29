@@ -53,6 +53,4 @@ public class CompraProductoPK implements Serializable{
         return true;
     }
 
-    
-
 }
