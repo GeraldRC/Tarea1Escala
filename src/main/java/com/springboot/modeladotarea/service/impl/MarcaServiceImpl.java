@@ -8,7 +8,9 @@ import com.springboot.modeladotarea.repo.IMarcaRepo;
 import com.springboot.modeladotarea.service.IMarcaService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class MarcaServiceImpl implements IMarcaService {
 
     @Autowired

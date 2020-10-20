@@ -8,7 +8,9 @@ import com.springboot.modeladotarea.repo.IClienteRepo;
 import com.springboot.modeladotarea.service.IClienteService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ClienteServiceImpl implements IClienteService {
 
     @Autowired

@@ -8,7 +8,9 @@ import com.springboot.modeladotarea.repo.ISupervisorRepo;
 import com.springboot.modeladotarea.service.ISupervisorService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class SupervisorServiceImpl implements ISupervisorService {
 
     @Autowired

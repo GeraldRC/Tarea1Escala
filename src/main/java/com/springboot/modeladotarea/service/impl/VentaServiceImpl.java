@@ -8,7 +8,9 @@ import com.springboot.modeladotarea.repo.IVentaRepo;
 import com.springboot.modeladotarea.service.IVentaService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class VentaServiceImpl implements IVentaService {
 
     @Autowired
