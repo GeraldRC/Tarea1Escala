@@ -18,7 +18,7 @@ public class Venta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idventa;
+    private Integer idVenta;
 
     @ManyToOne
     @JoinColumn(name = "id_vendedor", foreignKey = @ForeignKey(name = "FK_venta_vendedor"))
@@ -34,15 +34,17 @@ public class Venta {
     @Column(name = "fecha_venta", nullable = false)
     private LocalDateTime fecha;
 
-    public Integer getIdventa() {
-        return idventa;
-    }
+    
 
-    public void setIdventa(Integer idventa) {
-        this.idventa = idventa;
-    }
+    public Integer getIdVenta() {
+		return idVenta;
+	}
 
-    public Vendedor getVendedor() {
+	public void setIdVenta(Integer idVenta) {
+		this.idVenta = idVenta;
+	}
+
+	public Vendedor getVendedor() {
         return vendedor;
     }
 
@@ -74,29 +76,31 @@ public class Venta {
         this.fecha = fecha;
     }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((idventa == null) ? 0 : idventa.hashCode());
-        return result;
-    }
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((idVenta == null) ? 0 : idVenta.hashCode());
+		return result;
+	}
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Venta other = (Venta) obj;
-        if (idventa == null) {
-            if (other.idventa != null)
-                return false;
-        } else if (!idventa.equals(other.idventa))
-            return false;
-        return true;
-    }
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Venta other = (Venta) obj;
+		if (idVenta == null) {
+			if (other.idVenta != null)
+				return false;
+		} else if (!idVenta.equals(other.idVenta))
+			return false;
+		return true;
+	}
+
+    
 
 }

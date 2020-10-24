@@ -39,14 +39,8 @@ public class ClienteServiceImpl implements IClienteService {
 
     @Override
     public boolean eliminar(Integer id) {
-        boolean res = false;
-        Optional<Cliente> op = repo.findById(id);
-
-        if (op.isPresent()) {
-            repo.deleteById(id);
-            res = true;
-        }
-        return res;
+        repo.deleteById(id);
+        return true;
     }
 
 }

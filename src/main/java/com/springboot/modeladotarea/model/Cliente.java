@@ -18,10 +18,10 @@ public class Cliente {
     @Column(name = "nombre_cliente",nullable = false)
     private String nombre;
 
-    @Column(name = "direccion_cliente")
+    @Column(name = "direccion_cliente", nullable = false)
     private String direccion;
 
-    @Column(name = "telefono_cliente")
+    @Column(name = "telefono_cliente", nullable = false)
     private String telefono;
 
     public Integer getIdcliente() {

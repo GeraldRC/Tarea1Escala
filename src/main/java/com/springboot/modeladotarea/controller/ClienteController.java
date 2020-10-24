@@ -61,14 +61,12 @@ public class ClienteController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Object> eliminar(@PathVariable("id") Integer id){
-        
-        if (!service.eliminar(id)) {
+        Cliente obj = service.leerPorId(id);
+        if (obj.getIdcliente() == null) {
             throw new ModeloNotFoundException("EL ID NO HA SIDO ENCONTRADO" + id);
         }
         service.eliminar(id);
-
         return new ResponseEntity<Object>(HttpStatus.OK);
-
     }
     
 }
